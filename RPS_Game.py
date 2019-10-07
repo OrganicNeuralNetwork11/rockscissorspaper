@@ -8,15 +8,12 @@ def play():
         ai = ''
 
         # ~~~ AI ~~~
-
         ai = random.choice(ch)
 
         # ~~~ Player ~~~
-
         player = input('Move: ')
 
         # ~~~ Determing wins/losses ~~~
-
         # Tie
         if ai == player:
             print('Tie!')
@@ -42,16 +39,16 @@ def play():
             elif player == 'Paper':
                 print('Lose!')
 
+        # ~~~ Debugging ~~~
+        print('AI chose: ' + ai)
+        print('Player chose: ' + player)
+
         # Continuing Loop (Exit or continue game)
         continues = input('Keep playing? Y/N ')
         if continues == 'Y':
             play()
         elif continues == 'N':
             exit()
-
-        # ~~~ Debugging ~~~
-        print('AI chose: ' + ai)
-        print('Player chose: ' + player)
 
 # Starting game
 play()
